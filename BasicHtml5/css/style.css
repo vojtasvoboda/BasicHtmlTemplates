@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle; }
+body { font: 13px/1.231 sans-serif; *font-size: small; } /* Hack retained to preserve specificity */
+select, input, textarea, button { font: 99% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+/* Minimal base styles. */
+html { overflow-y: scroll }
+body { text-align: left; font-size: small; }
+a:hover, a:active { outline: none }
+ol { list-style-type: decimal }
+small { font-size: 85%; }
+strong, th { font-weight: bold }
+textarea { overflow: auto; }
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+button, input, select, textarea { margin: 0 }
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+button {  width: auto; overflow: visible; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/*----- custom global styles -----*/
+body { color: #444; background: #fff url(../img/body_bg.gif) top repeat-x; font-family: Arial, Verdana, Tahoma, sans-serif; }
+input { padding: 0 }
+#wrapper { width: 900px; margin: 0 auto; position: relative; }
+h1 { font-size: 180%; color: #3b3a3a; }
+h2 { font-size: 115%; color: #a8cf37; }
+h3 { font-size: 110% }
+p { line-height: 1.5; }
+a, a:active, a:visited { text-decoration: none; color: #84ae0a; }
+a:hover { text-decoration: underline; }
+
+/*----- custom global classes -----*/
+.noscreen { display: none; visibility: hidden; }
+.reseter { float: none; clear: both }
+.clear { overflow:hidden; width:1px; height:1px; clear:both }
+.left { text-align: left }
+.right { text-align: right }
+.red { color: #f00 }
+
+/*----- HEADER -----*/
+header { width: 900px; height: 138px; }
+header #homepage a {
+  position: absolute; top: 0; right: 0; background: #fff url(../img/logo.jpg) center 40px no-repeat;
+  width: 177px; height: 138px; }
+
+/*----- CONTENT -----*/
+#content { width: 900px; overflow: hidden; }
+
+/*----- SECTION -----*/
+section { float: left; width: 500px; padding: 0 10px 0 0px; }
+section p { margin: 0 0 15px }
+section ul,
+section ol { margin: 0 0 15px; padding: 0 0 0 35px; line-height: 1.7; }
+section form th { vertical-align: top; padding: 3px 5px; text-align: right; }
+section form input,
+section form textarea { padding: 2px; margin: 2px; }
+
+/*----- ASIDE -----*/
+aside { float: right; width: 177px; height: auto; }
+
+/*----- NAVIGATION -----*/
+nav { display: none; position: absolute; top: 80px; right: 5px; width: 400px; height: 50px; }
+nav li { display: block; float: left; }
+nav a { display: block; float: left; width: 30px; }
+
+/*----- FOOTER -----*/
+footer { width: 100%; height: 200px; background-color: #e1e1e1; color: #626262; }
+footer a {  }
+
+/* End of CSS Document */

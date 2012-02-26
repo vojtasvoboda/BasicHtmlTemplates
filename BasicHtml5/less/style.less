@@ -5,20 +5,23 @@
 @import "reset.less";
 
 // define colors
-@bg_color: #dedcda;
-@wrapper_color: #fff;
-@header_color: #296525;
-@footer_bg: #111210;
-@footer_color: #84837d;
-@fg_color: #296525;
-@gray_color: #6a6864;
+@bg_color: transparent;
+@fg_color: #be2026;
+@wrapper_color: #000;
+@header_bg: transparent;
+@footer_bg: #777;
+@footer_color: #fff;
+@gray_color: #777;
 
 // define widths
-@wrapper_width: 900px;
+@wrapper_width: 948px;
+@header_height: 180px;
+@logo_width: 406px;
+@logo_height: 81px;
 
 // define margins
-@wrapper_margin: 33px;
-@vertical_margin: 25px;
+@wrapper_margin: 0px;
+@vertical_margin: 28px;
 
 // mixins
 .inverted-a() {
@@ -36,38 +39,30 @@
     padding: 0 0 10px;
   }  
 }
-
-/* Minimal base styles. */
-html { overflow-y: scroll }
-body { text-align: left; font-size: small; }
-a:hover, a:active { outline: none }
-ol { list-style-type: decimal }
-small { font-size: 85%; }
-strong, th { font-weight: bold }
-textarea { overflow: auto; }
-.ie6 legend, .ie7 legend { margin-left: -7px; }
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
-.ie6 input { vertical-align: text-bottom; }
-label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
-button, input, select, textarea { margin: 0 }
-::-moz-selection{ background: @fg_color; color: #fff; text-shadow: none; }
-::selection { background: @fg_color; color: #fff; text-shadow: none; }
-a:link { -webkit-tap-highlight-color: @fg_color; }
-button {  width: auto; overflow: visible; }
-.ie7 img { -ms-interpolation-mode: bicubic; }
+.box-shadow(@color: #ddd) {
+  -webkit-box-shadow: inset 0px 3px 8px 1px @color;
+  -moz-box-shadow: inset 0px 3px 8px 1px @color;
+  box-shadow: inset 0px 3px 8px 1px @color;
+}
+.opacity(@int: 0.9) {
+  @int2: @int * 10;
+  opacity: @int; filter: alpha(opacity=@int2);
+}
 
 /*----- custom global styles -----*/
-body { color: #000; background-color: @bg_color; font-family: Arial, Verdana, Tahoma, sans-serif; }
+body {
+  color: #000; background: @bg_color url(../img/body_bg.gif) 0 0 repeat-x; 
+  font-family: Arial, Verdana, Tahoma, sans-serif;
+}
 input { padding: 0 }
-#wrapper { width: @wrapper_width; margin: @vertical_margin auto; padding: @vertical_margin 0 0; position: relative; background-color: @wrapper_color; }
-h1 { font-size: 180%; color: @fg_color; margin: 0 0 30px; }
-h2 { font-size: 140%; color: @fg_color; margin: 0 0 15px; }
-h3 { font-size: 115%; color: @fg_color; }
+#wrapper { width: @wrapper_width; margin: 0 auto; position: relative; }
+h1 { font-size: 150%; color: @fg_color; margin: 0 0 10px; }
+h2 { font-size: 125%; color: @fg_color; margin: 0 0 10px; }
+h3 { font-size: 110%; color: @fg_color; }
 p { line-height: 1.5; }
 a { color: @fg_color; }
 a:hover { text-decoration: none }
+ul, ol { line-height: 1.7 }
 
 /*----- custom global classes -----*/
 .noscreen { display: none; visibility: hidden; }
@@ -79,12 +74,12 @@ a:hover { text-decoration: none }
 /*----- HEADER -----*/
 header {
   width: @wrapper_width - 2 * @wrapper_margin;
-  height: 316px;
-  margin: 0 @wrapper_margin;
-  background: @header_color url(../img/header_bg.jpg) 0 0 no-repeat;
+  height: @header_height;
+  background-color: @header_bg;
+  margin: 0 0 @vertical_margin;
   #homepage a {
-    display: block; width: 289px; height: 76px;
-    background: #fff url(../img/logo.gif) 5px 2px no-repeat;
+    display: block; width: @logo_width + 19; height: @logo_height + 30;
+    background: transparent url(../img/logo.png) right bottom no-repeat;
     span { display: none }
   }
 }
@@ -92,29 +87,35 @@ header {
 /*----- CONTENT -----*/
 #content {
   width: @wrapper_width - 2 * @wrapper_margin;
-  margin: @vertical_margin @wrapper_margin 0;
   padding: 0 0 @vertical_margin;
   overflow: hidden;
+  input[type=text], input[type=password], textarea {
+    background-color: #fff; .box-shadow(#f3f3f3);
+    border: 1px solid #d1d1d1; padding: 3px; margin: 0 0 5px; color: @fg_color;
+  }
+  input[type=submit] {
+    background: #fff url(../img/login.png) 0 0 no-repeat; border: 0;
+    color: #fff; font-weight: bold; font-size: 90%;
+    width: 90px; height: 25px; line-height: 25px;
+    &:hover { background-position: 0 -25px; }
+  }
 }
 
 /*----- SECTION -----*/
 section {
-  float: right;
-  width: 600px;
+  float: right; width: 702px; font-size: 110%;
+  &.detail h1, h2 {
+     .bold-font(@fg_color); font-size: 105%;
+     border-bottom: 5px solid @fg_color; margin: 0 0 1px;
+  }
   h3 { margin: 0 0 10px }
   p { margin: 0 0 10px }
-  ul,
-  ol { margin: 0 0 10px; padding: 0 0 0 35px; line-height: 1.7; }
+  ul, ol { margin: 0 0 10px; padding: 0 0 0 35px; }
   form {
+    margin: 20px;
     th { vertical-align: top; padding: 3px 5px; text-align: right; }
-    input,
-    textarea { padding: 2px; margin: 2px; }
-  }
-  #aktuality {
-    .column(360px);
-    .aktualita {
-      clear: both; margin: 0 0 30px;
-      img { float: left; margin: 0 15px 10px 0; }
+    input[type=text], input[type=password], textarea {
+      padding: 2px; margin: 2px; width: 230px;
     }
   }
   #fotogalerie {
@@ -140,45 +141,51 @@ section {
 
 /*----- ASIDE -----*/
 aside {
-  float: left; width: 200px; height: auto;
-  /*----- NAVIGATION -----*/
-  nav {
-    margin: 0 0 30px;
-    ol { line-height: 1.7 }
-    a {
-      .inverted-a;
-      padding: 0 0 0 30px;
-      &#cesky { background: #fff url(../img/lang/cz.gif) 0 0 no-repeat }
-      &#english { background: #fff url(../img/lang/en.gif) 0 0 no-repeat }
-      &#deutsch { background: #fff url(../img/lang/de.gif) 0 0 no-repeat }
-	}
-    span { display: block; padding: 0 0 0 30px; color: @gray_color; line-height: 1.3; margin: 0 0 5px; }
-  }
-  h3,
-  p {
-    padding: 0 0 0 30px;
-    margin: 0 0 5px;
-    a {
-      color: #000;
+  float: left; width: 229px; height: auto;
+  a { .inverted-a(); }
+  .box {
+    background-color: #fff; color: @gray_color;
+    margin: 0 0 15px 19px; padding: 10px 7px 1px;
+    ul {
+      clear: left; list-style-type: none; line-height: 1.7; font-size: 110%; margin: 0 0 10px;
+      a { color: @gray_color; }
     }
-  }  
+    p { clear: both; line-height: 1.3; font-size: 90%; margin: 0 0 10px; }
+  }
+}
+
+/*----- NAVIGATION -----*/
+nav {
+  position: absolute; top: 141px; right: 0;
+  width: auto; height: 39px;
+  li {
+    display: block; float: left; margin: 0 0 0 5px;
+    a {
+      .bold-font(#fff); text-decoration: none; line-height: 39px;
+      width: 130px; height: 39px; display: block; text-align: center;
+      background: transparent url(../img/menu_li.png) 0 0 no-repeat;
+      &:hover, &.active {
+        background-position: 0 -39px;
+      }
+    }
+  }
 }
 
 /*----- FOOTER -----*/
 footer {
-  padding: 35px 0 70px; 
+  padding: 5px 0 70px;
   background-color: @footer_bg; 
   color: @footer_color;
   #footer {
     width: @wrapper_width;
     margin: 0 auto;
-    text-align: center;
+    text-align: right;
+    background: #aaa;
     a {
-      color: @fg_color;
+      color: @footer_color;
       .inverted-a;
     }
   }
 }
-
 
 /* End of CSS Document */

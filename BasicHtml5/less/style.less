@@ -3,50 +3,15 @@
 
 // imports
 @import "reset.less";
+@import "settings.less";
+@import "mixins.less";
 
-// define colors
-@bg_color: transparent;
-@fg_color: #be2026;
-@wrapper_color: #000;
-@header_bg: transparent;
-@footer_bg: #777;
-@footer_color: #fff;
-@gray_color: #777;
-
-// define widths
-@wrapper_width: 948px;
-@header_height: 180px;
-@logo_width: 406px;
-@logo_height: 81px;
-
-// define margins
-@wrapper_margin: 0px;
-@vertical_margin: 28px;
-
-// mixins
-.inverted-a() {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+/* DEBUG */
+#wrapper {
+  border: 1px solid #ddd;
 }
-.column(@width, @float: left) {
-  margin: @vertical_margin 0 0 0;
-  float: @float; width: @width;
-  margin: @vertical_margin 0 0 0;
-  h2 {
-    border-bottom: 1px solid @fg_color;
-    padding: 0 0 10px;
-  }  
-}
-.box-shadow(@color: #ddd) {
-  -webkit-box-shadow: inset 0px 3px 8px 1px @color;
-  -moz-box-shadow: inset 0px 3px 8px 1px @color;
-  box-shadow: inset 0px 3px 8px 1px @color;
-}
-.opacity(@int: 0.9) {
-  @int2: @int * 10;
-  opacity: @int; filter: alpha(opacity=@int2);
+header, #content, aside, footer {
+  border: 1px solid blue;
 }
 
 /*----- custom global styles -----*/
@@ -56,20 +21,23 @@ body {
 }
 input { padding: 0 }
 #wrapper { width: @wrapper_width; margin: 0 auto; position: relative; }
-h1 { font-size: 150%; color: @fg_color; margin: 0 0 10px; }
+h1 { font-size: 150%; color: @fg_color; margin: 0 0 15px; }
 h2 { font-size: 125%; color: @fg_color; margin: 0 0 10px; }
-h3 { font-size: 110%; color: @fg_color; }
+h3 { font-size: 110%; color: @fg_color; margin: 0 0 15px; }
 p { line-height: 1.5; }
-a { color: @fg_color; }
+a { color: @fg_color_a; }
 a:hover { text-decoration: none }
 ul, ol { line-height: 1.7 }
 
 /*----- custom global classes -----*/
 .noscreen { display: none; visibility: hidden; }
-.reseter { float: none; clear: both }
-.clear { overflow:hidden; width:1px; height:1px; clear:both }
-.left { text-align: left }
-.right { text-align: right }
+.reseter { float: none; clear: both; }
+.clear { overflow: hidden; width: 1px; height: 1px; clear: both; }
+.left { text-align: left; }
+.right { text-align: right; }
+.f-l { float: left; }
+.f-r { float: right; }
+.last { margin: 0 !important; border: 0 !important; }
 
 /*----- HEADER -----*/
 header {
@@ -90,8 +58,8 @@ header {
   padding: 0 0 @vertical_margin;
   overflow: hidden;
   input[type=text], input[type=password], textarea {
-    background-color: #fff; .box-shadow(#f3f3f3);
-    border: 1px solid #d1d1d1; padding: 3px; margin: 0 0 5px; color: @fg_color;
+    background-color: #fff; border: 1px solid #d1d1d1;
+    padding: 3px; margin: 0 0 5px; color: @fg_color;
   }
   input[type=submit] {
     background: #fff url(../img/login.png) 0 0 no-repeat; border: 0;
@@ -103,11 +71,7 @@ header {
 
 /*----- SECTION -----*/
 section {
-  float: right; width: 702px; font-size: 110%;
-  &.detail h1, h2 {
-     .bold-font(@fg_color); font-size: 105%;
-     border-bottom: 5px solid @fg_color; margin: 0 0 1px;
-  }
+  float: right; width: 500px;
   h3 { margin: 0 0 10px }
   p { margin: 0 0 10px }
   ul, ol { margin: 0 0 10px; padding: 0 0 0 35px; }
@@ -141,7 +105,7 @@ section {
 
 /*----- ASIDE -----*/
 aside {
-  float: left; width: 229px; height: auto;
+  float: left; width: 230px; height: auto;
   a { .inverted-a(); }
   .box {
     background-color: #fff; color: @gray_color;
@@ -156,13 +120,13 @@ aside {
 
 /*----- NAVIGATION -----*/
 nav {
-  position: absolute; top: 141px; right: 0;
-  width: auto; height: 39px;
+  position: absolute; top: 10px; right: 10px;
+  width: auto; height: auto;
   li {
-    display: block; float: left; margin: 0 0 0 5px;
+    display: block; float: left; margin: 0 0 0 20px;
     a {
-      .bold-font(#fff); text-decoration: none; line-height: 39px;
-      width: 130px; height: 39px; display: block; text-align: center;
+      text-decoration: none; line-height: 39px;
+      width: auto; height: 39px; display: block; text-align: center;
       background: transparent url(../img/menu_li.png) 0 0 no-repeat;
       &:hover, &.active {
         background-position: 0 -39px;

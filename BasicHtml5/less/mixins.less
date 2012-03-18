@@ -1,0 +1,25 @@
+// mixins
+.inverted-a() {
+  text-decoration: none;
+  &:hover, &.active {
+    text-decoration: underline;
+  }
+}
+.column(@width, @float: left) {
+  margin: @vertical_margin 0 0 0;
+  float: @float; width: @width;
+  margin: @vertical_margin 0 0 0;
+  h2 {
+    border-bottom: 1px solid @fg_color;
+    padding: 0 0 10px;
+  }  
+}
+.box-shadow(@color: #ddd) {
+  -webkit-box-shadow: inset 0px 3px 8px 1px @color;
+  -moz-box-shadow: inset 0px 3px 8px 1px @color;
+  box-shadow: inset 0px 3px 8px 1px @color;
+}
+.opacity(@int: 0.9) {
+  @int2: @int * 10;
+  opacity: @int; filter: alpha(opacity=@int2);
+}

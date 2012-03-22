@@ -38,6 +38,8 @@ ul, ol { line-height: 1.7 }
 .f-l { float: left; }
 .f-r { float: right; }
 .last { margin: 0 !important; border: 0 !important; }
+.i { font-style: italic; }
+.red, .error { color: @red_color; }
 
 /*----- HEADER -----*/
 header {
@@ -46,7 +48,7 @@ header {
   background-color: @header_bg;
   margin: 0 0 @vertical_margin;
   #homepage a {
-    display: block; width: @logo_width + 19; height: @logo_height + 30;
+    display: block; width: @logo_width + @logo_left; height: @logo_height + @logo_top;
     background: transparent url(../img/logo.png) right bottom no-repeat;
     span { display: none }
   }

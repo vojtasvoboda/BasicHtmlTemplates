@@ -19,6 +19,11 @@
   -moz-box-shadow: inset 0px 3px 8px 1px @color;
   box-shadow: inset 0px 3px 8px 1px @color;
 }
+.border-radius(@rad: 5px) {
+  -webkit-border-radius: @rad;
+  -moz-border-radius: @rad;
+  border-radius: @rad;
+}
 .opacity(@int: 0.9) {
   @int2: @int * 10;
   opacity: @int; filter: alpha(opacity=@int2);

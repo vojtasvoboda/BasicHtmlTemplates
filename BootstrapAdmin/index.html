@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <title>Název stránek &#124; Hlavní stránka
+    </title>
+    <meta name="language" content="Czech" />
+    <meta name="robots" content="all,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style type="text/css">
+      body {
+        padding-top: 50px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+ 
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Modernizr enables HTML5 elements & feature detects -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+  </head>
+  <body>
+
+    <header class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <div class="btn-group pull-right">
+            <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"></i> Josef Novák <span class="caret"></span></a>
+            <ul class="dropdown-menu" id="dropdown">
+              <li><a href="/"><i class="icon-pencil"></i> Upravit účet</a></li>
+              <li class="divider"></li>
+              <li><a href="/">Přejít na stránky</a></li>
+              <li><a href="/">Správa hostingu</a></li>
+              <li><a href="/">Poštovní schránka</a></li>
+              <li class="divider"></li>
+              <li><a href="/"><i class="icon-ban-circle"></i> Odhlásit se</a></li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn-navbar pull-right" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span>
+          </a>
+          <a class="brand" href="#">FreshCMS 2.0</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav" style="">
+              <li class="active"><a href="/">Kategorie</a></li>
+              <li><a href="/">Fotogalerie</a></li>
+              <li><a href="/">Aktuality</a></li>
+              <li><a href="/">Nastavení</a></li>
+              <li><a href="/">Soubory</a></li>
+              <li><a href="/">Administrátoři</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- /.container-fluid -->
+      </div><!-- /.navbar-inner -->
+    </header><!-- /header -->
+
+    <div id="wrapper" class="container-fluid">
+      <div id="content" class="row-fluid">
+
+        <aside class="span2">
+          <div class="well well-large sidebar-nav bs-docs-sidenav">
+            <ul class="nav nav-list">
+                <li class="nav-header">Správa kategorií</li>
+                <li class="active"><a href="/"><i class="icon-home icon-white"></i> Seznam kategorií</a></li>
+                <li><a href="/"><i class="icon-plus"></i> Přidat novou kategorii</a></li>
+                <li><a href="/"><i class="icon-globe"></i> Vygenerovat sitemap</a></li>
+                <li class="nav-header">Seznam kategorií</li>
+                <li><a href="/">Tónování autoskel</a></li>
+                <li><a href="/">O tónování</a></li>
+                <li><a href="/">Výběr firmy</a></li>
+                <li><a href="/">Obchodní podmínky</a></li>
+                <li><a href="/">Pro firmy</a></li>
+                <li><a href="/">Kontakt</a></li>
+                <li><a href="/">Kontakty odesláno</a></li>
+                <li class="divider"></li>
+                <li><a href="/"><i class="icon-question-sign"></i> Nápověda</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="span10">
+          <h1>Kategorie stránek</h1>
+          <p>Lorem
+            <a href="/">ipsum dolor sit amet</a>, consectetur adipiscing elit. Donec orci massa, mattis id semper quis, fringilla vel neque. Nunc molestie ullamcorper faucibus. Nam malesuada consectetur lacus, ac convallis dui semper eu. Vestibulum tincidunt massa vel diam ullamcorper vitae pulvinar massa cursus. Duis iaculis adipiscing leo a luctus. Etiam et molestie diam. Aliquam sagittis lacinia suscipit. Etiam lorem ipsum, fringilla ac tristique vel, faucibus a felis. Integer sollicitudin pulvinar dolor, tincidunt porta odio semper egestas. Cras quis tellus eu ante adipiscing feugiat. Aenean adipiscing metus ac nunc facilisis id posuere erat vehicula. Mauris vel justo et lectus lobortis iaculis nec in mauris.
+          </p>
+
+          <br />
+
+          <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="/">Kategorie</a>
+          </li>
+          <li><a href="/">Stránky</a></li>
+          <li><a href="/">Odkazy</a></li>
+          </ul>
+
+          <table class="table table-striped table-hover">
+
+          <tr>
+           <td><a href="/administrace/kategorie/uvod/">Tónování autoskel</a></td>
+           <td><span style="color:#ccc">▲</span>
+             <a href="/administrace/kategorie-poradi/1/down/" title="Posunout dolů">▼</a>
+           </td>
+           <td>
+            <a href="/administrace/kategorie-nova/1/" title="Přidat subpoložku" class="icon-plus"><span class="hide">přidat</span></a>
+            <a href="/administrace/kategorie-odstranit/234/" onclick='return confirm("Opravdu smazat kategorii \"O tónování\"?");' title="Odstranit">
+              <span class="icon-trash"><span class="hide">smazat</span></span>
+            </a>
+           </td>
+          </tr>
+          <tr>
+           <td><a href="/administrace/kategorie/o-tonovani-skel/">O tónování</a></td>
+           <td>
+            <a href="/administrace/kategorie-poradi/234/up/" title="Posunout nahoru">▲</a>
+             <a href="/administrace/kategorie-poradi/234/down/" title="Posunout dolů">▼</a>
+           </td>
+           <td><a href="/administrace/kategorie-nova/234/"
+              style="font-family: 'Arial Black'; font-weight: bold; font-size: 15px;" title="Přidat subpoložku" class="icon-plus"><span class="hide">přidat</span></a>
+            <a href="/administrace/kategorie-odstranit/234/" onclick='return confirm("Opravdu smazat kategorii \"O tónování\"?");' title="Odstranit"><span class="icon-trash"><span class="hide">smazat</span></span></a>
+           </td>
+          </tr>
+          <tr >
+           <td><a href="/administrace/kategorie/dodavatele/">Výběr firmy</a></td>
+           <td>
+            <a href="/administrace/kategorie-poradi/235/up/" title="Posunout nahoru">
+             ▲
+            </a>
+             <a href="/administrace/kategorie-poradi/235/down/" title="Posunout dolů">
+              ▼
+             </a>
+           </td>
+           <td><a href="/administrace/kategorie-nova/235/"
+              style="font-family: 'Arial Black'; font-weight: bold; font-size: 15px;" title="Přidat subpoložku" class="icon-plus"><span class="hide">přidat</span></a>
+            <a href="/administrace/kategorie-odstranit/235/"
+             onclick='return confirm("Opravdu smazat kategorii \"Výběr firmy\"?");'
+             style="font-family: 'Arial Black'; font-weight: bold; font-size: 14px; color: #F27523" title="Odstranit"><span class="icon-trash"><span class="hide">smazat</span></span></a>
+           </td>
+          </tr>
+          <tr>
+           <td><a href="/administrace/kategorie/obchodni-podminky/">Obchodní podmínky</a></td>
+           <td>
+            <a href="/administrace/kategorie-poradi/236/up/" title="Posunout nahoru">
+             ▲
+            </a>
+             <a href="/administrace/kategorie-poradi/236/down/" title="Posunout dolů">
+              ▼
+             </a>
+           </td>
+           <td><a href="/administrace/kategorie-nova/236/"
+              style="font-family: 'Arial Black'; font-weight: bold; font-size: 15px;" title="Přidat subpoložku" class="icon-plus"><span class="hide">přidat</span></a>
+            <a href="/administrace/kategorie-odstranit/236/"
+             onclick='return confirm("Opravdu smazat kategorii \"Obchodní podmínky\"?");'
+             style="font-family: 'Arial Black'; font-weight: bold; font-size: 14px; color: #F27523" title="Odstranit"><span class="icon-trash"><span class="hide">smazat</span></span></a>
+           </td>
+          </tr>
+          <tr >
+           <td><a href="/administrace/kategorie/pro-firmy/">Pro firmy</a></td>
+           <td>
+            <a href="/administrace/kategorie-poradi/237/up/" title="Posunout nahoru">
+             ▲
+            </a>
+             <a href="/administrace/kategorie-poradi/237/down/" title="Posunout dolů">
+              ▼
+             </a>
+           </td>
+           <td><a href="/administrace/kategorie-nova/237/"
+              style="font-family: 'Arial Black'; font-weight: bold; font-size: 15px;" title="Přidat subpoložku" class="icon-plus"><span class="hide">přidat</span></a>
+            <a href="/administrace/kategorie-odstranit/237/"
+             onclick='return confirm("Opravdu smazat kategorii \"Pro firmy\"?");'
+             style="font-family: 'Arial Black'; font-weight: bold; font-size: 14px; color: #F27523" title="Odstranit"><span class="icon-trash"><span class="hide">smazat</span></span></a>
+           </td>
+          </tr>
+          <tr>
+           <td><a href="/administrace/kategorie/kontakty/">Kontakt</a></td>
+           <td>
+            <a href="/administrace/kategorie-poradi/229/up/" title="Posunout nahoru">
+             ▲
+            </a>
+             <a href="/administrace/kategorie-poradi/229/down/" title="Posunout dolů">
+              ▼
+             </a>
+           </td>
+           <td><a href="/administrace/kategorie-nova/229/"
+              style="font-family: 'Arial Black'; font-weight: bold; font-size: 15px;" title="Přidat subpoložku" class="icon-plus"><span class="hide">přidat</span></a>
+            <a href="/administrace/kategorie-odstranit/229/"
+             onclick='return confirm("Opravdu smazat kategorii \"Kontakt\"?");'
+             style="font-family: 'Arial Black'; font-weight: bold; font-size: 14px; color: #F27523" title="Odstranit"><span class="icon-trash"><span class="hide">smazat</span></span></a>
+           </td>
+          </tr>
+          <tr >
+           <td><a href="/administrace/kategorie/kontakt-odeslano/">Kontakt odesláno</a></td>
+           <td>
+            <a href="/administrace/kategorie-poradi/239/up/" title="Posunout nahoru">
+             ▲
+            </a><span style="color: #BBBBBB;">▼</span>
+           </td>
+           <td><a href="/administrace/kategorie-nova/239/"
+              style="font-family: 'Arial Black'; font-weight: bold; font-size: 15px;" title="Přidat subpoložku" class="icon-plus"><span class="hide">přidat</span></a>
+            <a href="/administrace/kategorie-odstranit/239/"
+             onclick='return confirm("Opravdu smazat kategorii \"Kontakt odesláno\"?");'
+             style="font-family: 'Arial Black'; font-weight: bold; font-size: 14px; color: #F27523" title="Odstranit"><span class="icon-trash"><span class="hide">smazat</span></span></a>
+           </td>
+          </tr>
+          </table>
+
+          <div class="btn-toolbar">
+            <div class="btn-group" style="text-align:center;width:100%;">
+              <a href="/" class="btn active">1</a>
+              <a href="/" class="btn">2</a>
+              <a href="/" class="btn">3</a>
+              <a href="/" class="btn">4</a>
+              <a href="/" class="btn">5</a>
+              <a href="/" class="btn">Další &rarr;</a>
+            </div>
+          </div>
+
+          <h2>Uživatel</h2>
+
+          <div class="btn-group">
+            <a class="btn btn-primary dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-user icon-white"></i> Josef Novák <span class="caret"></span></a>
+            <ul class="dropdown-menu" id="dropdown">
+              <li><a href="/"><i class="icon-pencil"></i> Editovat</a></li>
+              <li><a href="/"><i class="icon-trash"></i> Smazat</a></li>
+              <li class="dropdown-submenu">
+                <a tabindex="-1" href="/">Další</a>
+                <ul class="dropdown-menu">
+                  <li><a href="/">První</a></li>
+                  <li><a href="/">Druhý</a></li>
+                  <li><a href="/">Třetí</a></li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li><a href="/"><i class="icon-ban-circle"></i> Odhlásit se</a></li>
+            </ul>
+          </div>
+
+          <h2>Formulář</h2>
+
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Paráda!</strong> Uživatel byl úspěšně vytvořen.
+          </div>
+
+          <form action="" method="post" class="">
+            <fieldset>
+              <legend>Základní nastavení</legend>
+              <table>
+              <tr class="required">
+              	<th><label class="required" for="frmadminCreateForm-jmeno">Jméno:</label></th>
+              	<td><input type="text" size="20" maxlength="100" class="text" name="jmeno" value="" /></td>
+              </tr>
+              <tr class="required">
+              	<th><label class="required" for="frmadminCreateForm-login">Přihlašovací jméno:</label></th>
+              	<td><input type="text" size="20" maxlength="100" class="text" name="login" id="frmadminCreateForm-login" value="" /></td>
+              </tr>
+              </table>
+            </fieldset>
+
+            <fieldset>
+              <legend>Nastavení hesla</legend>
+              <table>
+              <tr class="required">
+              	<th><label class="required" for="frmadminCreateForm-heslo">Heslo:</label></th>
+              	<td><input type="password" class="text" name="heslo" id="frmadminCreateForm-heslo" /></td>
+              </tr>
+              </table>
+            </fieldset>
+
+            <table>
+            <tr>
+            	<th>&nbsp;</th>
+            	<td><button type="button" id="submit" class="btn btn-primary" data-loading-text="Vytváří se...">Vytvořit</button></td>
+            </tr>
+            </table>
+          </form>
+
+        </section><!-- /section -->
+
+      </div><!-- /#content -->
+
+      <hr class="noscreen" />
+
+      <footer id="footer">
+        <p>Copyright &copy; 2012
+          <a href="http://www.firma.cz/">Firma s.r.o.</a>, All Rights Reserved
+        </p>
+      </footer>
+      <!-- /footer -->
+
+    </div><!-- /#wrapper -->
+
+  </body>
+</html>

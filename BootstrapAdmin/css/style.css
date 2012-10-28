@@ -1,0 +1,46 @@
+/* Custom CSS styles to override Twitter Bootstrap */
+#wrapper { padding-left: 0; }
+
+/* NAVIGATION */
+.navbar-inner .btn-navbar {
+  float: none;
+  width: 18px;
+  height: 12px;
+  position: absolute;
+  top: 5px;
+  right: 145px;
+}
+.nav-collapse.collapse {
+  height: auto;
+}
+
+/* FORMS */
+form th { text-align: right; width: 150px; padding: 2px 5px; }
+form fieldset { margin: 0 0 10px; }
+
+/* FOOTER */
+#footer {
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .navbar-inner .brand {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .well {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-left-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-left-radius: 0;
+    margin-top: 15px;
+  }
+}

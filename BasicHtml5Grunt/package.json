@@ -1,0 +1,15 @@
+{
+    "name": "ProjectName",
+    "version": "0.1.0",
+    "description": "Microsite",
+    "author": "Vojta Svoboda",
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "grunt-contrib-watch": "~0.4.4",
+        "grunt-contrib-sass": "~0.4.1",
+        "grunt-notify": "~0.2.4",
+        "grunt-cli": "latest",
+        "bower": "latest",
+        "grunt-contrib-compass": "~0.7.1"
+    }
+}

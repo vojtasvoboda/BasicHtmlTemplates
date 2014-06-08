@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "compass";
+@import "compass/reset";
+
+/*----- custom global styles -----*/
+body {
+    background-color: #eee;
+}
+h1 {
+    font-size: 180%;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 130%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+p {
+    line-height: 1.5;
+    color: #58585a;
+}
+a, a:active, a:visited {
+}
+a:hover {
+}
+strong {
+    font-weight: bold;
+}
+
+/*----- custom global classes -----*/
+.noscreen { display: none; visibility: hidden; }
+.reseter { float: none; clear: both }
+.clear { overflow:hidden; width:1px; height:1px; clear:both }
+.left { text-align: left }
+.right { text-align: right }
+.red { color: #ed1a3b }
+
+/*----- WRAPPER -----*/
+#wrapper {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/*----- HEADER -----*/
+header {
+    width: 980px;
+    height: 70px;
+    background-color: #aaa;
+    #homepage {
+        float: left;
+        margin-top: 15px;
+        a {
+            background-color: #000;
+            display: block;
+            width: 100px;
+            height: 26px;
+            padding: 10px 50px 0 50px;
+            color: #ddd;
+        }
+    }
+    #home_email {
+        float: right;
+        margin: 5px 10px 0 0;
+    }
+}
+
+/*----- CONTENT -----*/
+#content {
+    width: 980px;
+    margin-top: 10px;
+    p {
+        margin-bottom: 15px;
+    }
+    ul, ol {
+        list-style-type: disc;
+        margin: 5px 0 10px 25px;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+
+    #section {
+        float: left;
+        width: 640px;
+    }
+
+    #aside {
+        float: right;
+        width: 300px;
+    }
+}
+
+/*----- MENU -----*/
+#nav {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    li {
+        float: left;
+        display: block;
+        margin-left: 15px;
+        background-color: #888;
+        padding: 4px 8px;
+    }
+}
+
+/*----- FOOTER -----*/
+footer {
+    background-color: #aaa;
+    p {
+
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    body {
+        background-position: center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+/* End of CSS Document */

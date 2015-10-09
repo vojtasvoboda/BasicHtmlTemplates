@@ -1,0 +1,4 @@
+AuthUserFile /usr/local/www/data/servername.cz/domanin/.htpasswd
+AuthName “Log in please”
+AuthType Basic
+require valid-user

@@ -1,4 +1,4 @@
-$(document).ready(function(){	
+var main = function() {	
 
 	/* external links */
 	$('a').filter(function() {
@@ -56,5 +56,7 @@ $(document).ready(function(){
       }
     })
   }
-	
-});
+
+};
+
+$(document).ready(main);
